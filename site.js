@@ -8,20 +8,23 @@ btnAll.addEventListener('click',function(){
 let btnStarters = document.querySelector('#btnStarters')
 btnStarters.addEventListener('click', function(){
   let filteredDishes = getDishesBy("Starters")
+  populateDishes(filteredDishes)
 })
 
 let btnEntrees = document.querySelector('#btnEntrees')
 btnEntrees.addEventListener('click', function(){
   let filteredDishes = getDishesBy("Entrees")
+  populateDishes(filteredDishes)
 })
 
 let btnDesserts = document.querySelector('#btnDesserts')
 btnDesserts.addEventListener('click', function(){
   let filteredDishes = getDishesBy("Desserts")
+  populateDishes(filteredDishes)
 })
 
 function getDishesBy(course) {
-  let filteredDishes = dishes.filter(function(dish) {
+  let filteredDishes = dishes.filter(function(dishes) {
     return dishes.course == course
   })
   return filteredDishes
